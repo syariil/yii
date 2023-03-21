@@ -10,7 +10,7 @@ $this->title = 'Home';
 ?>
 <div class="site-index my-2">
     <h2 class="card-title my-2 border-bottom border-2 ">
-        New News
+        New News TErkini
     </h2>
     <div class="row d-flex justify-content-center my-2 py-2 border-bottom">
         <?php foreach($new_post as $post): ?>
