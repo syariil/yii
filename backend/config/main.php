@@ -11,7 +11,11 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => [
+        'referensi' => [
+            'class' => 'backend\modules\referensi\Module',
+        ],
+    ],
     'components' => [
     //     'view' => [
     //         'theme' => [
