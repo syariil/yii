@@ -34,9 +34,9 @@ CrudAsset::register($this);
                     '{export}'
                 ],
             ],
-            'striped' => true,
-            'condensed' => true,
-            'responsive' => true,
+            'striped' => false,
+            'condensed' => false,
+            'responsive' => false,
             'panel' => [
                 'type' => 'primary',
                 'heading' => '<i class="fas fa-list-alt"></i> Ref Kelamins listing',
