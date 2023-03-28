@@ -6,7 +6,7 @@ use yii\helpers\Html;
 /** @var common\models\referensi\RefAgama $model */
 
 $this->title = 'Create Ref Agama';
-$this->params['breadcrumbs'][] = ['label' => 'Ref Agamas', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Ref Agama', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="ref-agama-create">

@@ -6,7 +6,7 @@ use yii\widgets\DetailView;
 /** @var yii\web\View $this */
 /** @var common\models\referensi\RefAgama $model */
 
-$this->title = $model->ID;
+$this->title = $model->AGAMA;
 $this->params['breadcrumbs'][] = ['label' => 'Ref Agamas', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);

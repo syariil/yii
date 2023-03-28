@@ -10,7 +10,7 @@ use johnitvn\ajaxcrud\BulkButtonWidget;
 /* @var $searchModel backend\modules\referensi\models\RefKelaminSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Ref Kelamins';
+$this->title = 'Ref Kelamin';
 $this->params['breadcrumbs'][] = $this->title;
 
 CrudAsset::register($this);
@@ -27,16 +27,16 @@ CrudAsset::register($this);
             'toolbar'=> [
                 ['content'=>
                     Html::a('<i class="fas fa-plus"></i>', ['create'],
-                    ['role'=>'modal-remote','title'=> 'Create new Ref Kelamins','class'=>'btn btn-secondary']).
+                    ['role'=>'modal-remote','title'=> 'Create new Ref Kelamin','class'=>'btn btn-secondary']).
                     Html::a('<i class="fas fa-redo"></i>', [''],
                     ['data-pjax'=>1, 'class'=>'btn btn-secondary', 'title'=>'Reset Grid']).
                     '{toggleData}'.
                     '{export}'
                 ],
             ],
-            'striped' => false,
-            'condensed' => false,
-            'responsive' => false,
+            'striped' => true,
+            'condensed' => true,
+            'responsive' => true,
             'panel' => [
                 'type' => 'primary',
                 'heading' => '<i class="fas fa-list-alt"></i> Ref Kelamins listing',
