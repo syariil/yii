@@ -12,11 +12,11 @@ return [
     ],
         [
         'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'ID',
+        'attribute'=>'ID_PROVINSI',
     ],
     [
         'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'AGAMA',
+        'attribute'=>'PROVINSI',
     ],
     [
         'class'=>'\kartik\grid\DataColumn',

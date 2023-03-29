@@ -3,15 +3,17 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\referensi\RefCountry */
+/* @var $model common\models\referensi\RefGoldarah */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="ref-country-form">
+<div class="ref-goldarah-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'COUNTRY')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'ID')->textInput() ?>
+
+    <?= $form->field($model, 'GOL_DARAH')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'CREATE_BY')->textInput() ?>
 

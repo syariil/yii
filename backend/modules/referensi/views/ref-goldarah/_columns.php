@@ -12,11 +12,11 @@ return [
     ],
         [
         'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'ID_COUNTRY',
+        'attribute'=>'ID',
     ],
     [
         'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'COUNTRY',
+        'attribute'=>'GOL_DARAH',
     ],
     [
         'class'=>'\kartik\grid\DataColumn',

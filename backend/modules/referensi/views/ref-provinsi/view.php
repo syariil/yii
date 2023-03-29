@@ -3,15 +3,15 @@
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\referensi\RefCountry */
+/* @var $model common\models\referensi\RefProvinsi */
 ?>
-<div class="ref-country-view">
+<div class="ref-provinsi-view">
  
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            'ID_COUNTRY',
-            'COUNTRY',
+            'ID_PROVINSI',
+            'PROVINSI',
             'CREATE_BY',
             'CREATE_DATE',
             'CREATE_IP',
