@@ -3,9 +3,9 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\referensi\RefCountry */
+/* @var $model common\models\referensi\RefGoldarah */
 ?>
-<div class="ref-country-update">
+<div class="ref-goldarah-update">
 
     <?= $this->render('_form', [
         'model' => $model,

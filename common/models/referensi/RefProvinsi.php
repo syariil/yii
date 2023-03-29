@@ -5,10 +5,10 @@ namespace common\models\referensi;
 use Yii;
 
 /**
- * This is the model class for table "ref_country".
+ * This is the model class for table "ref_provinsi".
  *
- * @property int $ID_COUNTRY
- * @property string|null $COUNTRY
+ * @property int $ID_PROVINSI
+ * @property string|null $PROVINSI
  * @property int|null $CREATE_BY
  * @property string|null $CREATE_DATE
  * @property string|null $CREATE_IP
@@ -16,14 +16,14 @@ use Yii;
  * @property string|null $UPDATE_DATE
  * @property string|null $UPDATE_IP
  */
-class RefCountry extends \yii\db\ActiveRecord
+class RefProvinsi extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'ref_country';
+        return 'ref_provinsi';
     }
 
     /**
@@ -34,7 +34,7 @@ class RefCountry extends \yii\db\ActiveRecord
         return [
             [['CREATE_BY', 'UPDATE_BY'], 'integer'],
             [['CREATE_DATE', 'UPDATE_DATE'], 'safe'],
-            [['COUNTRY'], 'string', 'max' => 50],
+            [['PROVINSI'], 'string', 'max' => 50],
             [['CREATE_IP', 'UPDATE_IP'], 'string', 'max' => 100],
         ];
     }
@@ -45,8 +45,8 @@ class RefCountry extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ID_COUNTRY' => 'Id Country',
-            'COUNTRY' => 'Country',
+            'ID_PROVINSI' => 'Id Provinsi',
+            'PROVINSI' => 'Provinsi',
             'CREATE_BY' => 'Create By',
             'CREATE_DATE' => 'Create Date',
             'CREATE_IP' => 'Create Ip',

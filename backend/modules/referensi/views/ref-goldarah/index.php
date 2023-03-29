@@ -7,16 +7,16 @@ use johnitvn\ajaxcrud\CrudAsset;
 use johnitvn\ajaxcrud\BulkButtonWidget;
 
 /* @var $this yii\web\View */
-/* @var $searchModel backend\modules\referensi\models\RefAgamaSearch */
+/* @var $searchModel backend\modules\referensi\models\RefGoldarahSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Ref Agama';
+$this->title = 'Ref Goldarahs';
 $this->params['breadcrumbs'][] = $this->title;
 
 CrudAsset::register($this);
 
 ?>
-<div class="ref-agama-index">
+<div class="ref-goldarah-index">
     <div id="ajaxCrudDatatable">
         <?=GridView::widget([
             'id'=>'crud-datatable',
@@ -27,7 +27,7 @@ CrudAsset::register($this);
             'toolbar'=> [
                 ['content'=>
                     Html::a('<i class="fas fa-plus"></i>', ['create'],
-                    ['role'=>'modal-remote','title'=> 'Create new Ref Agama','class'=>'btn btn-secondary']).
+                    ['role'=>'modal-remote','title'=> 'Create new Ref Goldarahs','class'=>'btn btn-secondary']).
                     Html::a('<i class="fas fa-redo"></i>', [''],
                     ['data-pjax'=>1, 'class'=>'btn btn-secondary', 'title'=>'Reset Grid']).
                     '{toggleData}'.
@@ -39,7 +39,7 @@ CrudAsset::register($this);
             'responsive' => true,
             'panel' => [
                 'type' => 'primary',
-                'heading' => '<i class="fas fa-list-alt"></i> Ref Agama listing',
+                'heading' => '<i class="fas fa-list-alt"></i> Ref Goldarahs listing',
                 'before'=>'<em>* Resize table columns just like a spreadsheet by dragging the column edges.</em>',
                 'after'=>BulkButtonWidget::widget([
                             'buttons'=>Html::a('<i class="fas fa-trash"></i>&nbsp; Delete All',

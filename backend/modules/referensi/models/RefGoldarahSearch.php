@@ -5,12 +5,12 @@ namespace backend\modules\referensi\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\referensi\RefAgama;
+use common\models\referensi\RefGoldarah;
 
 /**
- * RefAgamaAjax represents the model behind the search form about `common\models\referensi\RefAgama`.
+ * RefGoldarahSearch represents the model behind the search form about `common\models\referensi\RefGoldarah`.
  */
-class RefAgamaAjax extends RefAgama
+class RefGoldarahSearch extends RefGoldarah
 {
     /**
      * @inheritdoc
@@ -19,7 +19,7 @@ class RefAgamaAjax extends RefAgama
     {
         return [
             [['ID', 'CREATE_BY', 'UPDATE_BY'], 'integer'],
-            [['AGAMA', 'CREATE_DATE', 'CREATE_IP', 'UPDATE_DATE', 'UPDATE_IP'], 'safe'],
+            [['GOL_DARAH', 'CREATE_DATE', 'CREATE_IP', 'UPDATE_DATE', 'UPDATE_IP'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class RefAgamaAjax extends RefAgama
      */
     public function search($params)
     {
-        $query = RefAgama::find();
+        $query = RefGoldarah::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -63,7 +63,7 @@ class RefAgamaAjax extends RefAgama
             'UPDATE_DATE' => $this->UPDATE_DATE,
         ]);
 
-        $query->andFilterWhere(['like', 'AGAMA', $this->AGAMA])
+        $query->andFilterWhere(['like', 'GOL_DARAH', $this->GOL_DARAH])
             ->andFilterWhere(['like', 'CREATE_IP', $this->CREATE_IP])
             ->andFilterWhere(['like', 'UPDATE_IP', $this->UPDATE_IP]);
 

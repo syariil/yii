@@ -5,12 +5,12 @@ namespace backend\modules\referensi\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use common\models\referensi\RefCountry;
+use common\models\referensi\RefProvinsi;
 
 /**
- * RefCountrySearch represents the model behind the search form about `common\models\referensi\RefCountry`.
+ * RefProvinsiSearch represents the model behind the search form about `common\models\referensi\RefProvinsi`.
  */
-class RefCountrySearch extends RefCountry
+class RefProvinsiSearch extends RefProvinsi
 {
     /**
      * @inheritdoc
@@ -18,8 +18,8 @@ class RefCountrySearch extends RefCountry
     public function rules()
     {
         return [
-            [['ID_COUNTRY', 'CREATE_BY', 'UPDATE_BY'], 'integer'],
-            [['COUNTRY', 'CREATE_DATE', 'CREATE_IP', 'UPDATE_DATE', 'UPDATE_IP'], 'safe'],
+            [['ID_PROVINSI', 'CREATE_BY', 'UPDATE_BY'], 'integer'],
+            [['PROVINSI', 'CREATE_DATE', 'CREATE_IP', 'UPDATE_DATE', 'UPDATE_IP'], 'safe'],
         ];
     }
 
@@ -41,7 +41,7 @@ class RefCountrySearch extends RefCountry
      */
     public function search($params)
     {
-        $query = RefCountry::find();
+        $query = RefProvinsi::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -56,14 +56,14 @@ class RefCountrySearch extends RefCountry
         }
 
         $query->andFilterWhere([
-            'ID_COUNTRY' => $this->ID_COUNTRY,
+            'ID_PROVINSI' => $this->ID_PROVINSI,
             'CREATE_BY' => $this->CREATE_BY,
             'CREATE_DATE' => $this->CREATE_DATE,
             'UPDATE_BY' => $this->UPDATE_BY,
             'UPDATE_DATE' => $this->UPDATE_DATE,
         ]);
 
-        $query->andFilterWhere(['like', 'COUNTRY', $this->COUNTRY])
+        $query->andFilterWhere(['like', 'PROVINSI', $this->PROVINSI])
             ->andFilterWhere(['like', 'CREATE_IP', $this->CREATE_IP])
             ->andFilterWhere(['like', 'UPDATE_IP', $this->UPDATE_IP]);
 

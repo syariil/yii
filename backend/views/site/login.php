@@ -3,10 +3,9 @@ use yii\helpers\Html;
 ?>
 <div class="card">
     <div class="card-body login-card-body">
-        <p class="login-box-msg">Sign in to start your session</p>
 
         <?php $form = \yii\bootstrap4\ActiveForm::begin(['id' => 'login-form']) ?>
-
+        <p>Username</p>
         <?= $form->field($model,'username', [
             'options' => ['class' => 'form-group has-feedback'],
             'inputTemplate' => '{input}<div class="input-group-append"><div class="input-group-text"><span class="fas fa-envelope"></span></div></div>',
@@ -15,7 +14,8 @@ use yii\helpers\Html;
         ])
             ->label(false)
             ->textInput(['placeholder' => $model->getAttributeLabel('username')]) ?>
-
+        
+        <p>Password</p>
         <?= $form->field($model, 'password', [
             'options' => ['class' => 'form-group has-feedback'],
             'inputTemplate' => '{input}<div class="input-group-append"><div class="input-group-text"><span class="fas fa-lock"></span></div></div>',
@@ -44,12 +44,6 @@ use yii\helpers\Html;
 
         <div class="social-auth-links text-center mb-3">
             <p>- OR -</p>
-            <a href="#" class="btn btn-block btn-primary">
-                <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
-            </a>
-            <a href="#" class="btn btn-block btn-danger">
-                <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
-            </a>
         </div>
         <!-- /.social-auth-links -->
 

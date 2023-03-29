@@ -5,9 +5,9 @@ use yii\helpers\Url;
 
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="<?= Url::home() ?>" class="brand-link">
-        <img src="<?=$assetDir?>/img/sikalLogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">Sikal LPFK</span>
+    <a href="index3.html" class="brand-link">
+        <img src="<?=$assetDir?>/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">SI-KAL</span>
     </a>
 
     <!-- Sidebar -->
@@ -61,6 +61,8 @@ use yii\helpers\Url;
                         'items' => [
                             ['label' => 'Agama', 'icon' => 'mosque', 'url' => ['/referensi/ref-agama']],
                             ['label' => 'Kelamin', 'icon' => 'venus-mars', 'url' => ['/referensi/ref-kelamin']],
+                            ['label' => 'Golongan Darah', 'icon' => 'venus-mars', 'url' => ['/referensi/ref-goldarah']],
+                            ['label' => 'Provinsi', 'icon' => 'venus-mars', 'url' => ['/referensi/ref-provinsi']],
                         ]
                     ],
                     // ['label' => 'Simple Link', 'icon' => 'th', 'badge' => '<span class="right badge badge-danger">New</span>'],

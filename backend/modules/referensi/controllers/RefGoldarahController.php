@@ -3,8 +3,8 @@
 namespace backend\modules\referensi\controllers;
 
 use Yii;
-use common\models\referensi\RefCountry;
-use backend\modules\referensi\models\RefCountrySearch;
+use common\models\referensi\RefGoldarah;
+use backend\modules\referensi\models\RefGoldarahSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -12,9 +12,9 @@ use \yii\web\Response;
 use yii\helpers\Html;
 
 /**
- * RefCountryController implements the CRUD actions for RefCountry model.
+ * RefGoldarahController implements the CRUD actions for RefGoldarah model.
  */
-class RefCountryController extends Controller
+class RefGoldarahController extends Controller
 {
     /**
      * @inheritdoc
@@ -33,12 +33,12 @@ class RefCountryController extends Controller
     }
 
     /**
-     * Lists all RefCountry models.
+     * Lists all RefGoldarah models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new RefCountrySearch();
+        $searchModel = new RefGoldarahSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -49,7 +49,7 @@ class RefCountryController extends Controller
 
 
     /**
-     * Displays a single RefCountry model.
+     * Displays a single RefGoldarah model.
      * @param integer $id
      * @return mixed
      */
@@ -59,7 +59,7 @@ class RefCountryController extends Controller
         if($request->isAjax){
             Yii::$app->response->format = Response::FORMAT_JSON;
             return [
-                    'title'=> "RefCountry #".$id,
+                    'title'=> "RefGoldarah #".$id,
                     'content'=>$this->renderAjax('view', [
                         'model' => $this->findModel($id),
                     ]),
@@ -74,7 +74,7 @@ class RefCountryController extends Controller
     }
 
     /**
-     * Creates a new RefCountry model.
+     * Creates a new RefGoldarah model.
      * For ajax request will return json object
      * and for non-ajax request if creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
@@ -82,7 +82,7 @@ class RefCountryController extends Controller
     public function actionCreate()
     {
         $request = Yii::$app->request;
-        $model = new RefCountry();
+        $model = new RefGoldarah();
 
         if($request->isAjax){
             /*
@@ -91,7 +91,7 @@ class RefCountryController extends Controller
             Yii::$app->response->format = Response::FORMAT_JSON;
             if($request->isGet){
                 return [
-                    'title'=> "Create new RefCountry",
+                    'title'=> "Create new RefGoldarah",
                     'content'=>$this->renderAjax('create', [
                         'model' => $model,
                     ]),
@@ -102,15 +102,15 @@ class RefCountryController extends Controller
             }else if($model->load($request->post()) && $model->save()){
                 return [
                     'forceReload'=>'#crud-datatable-pjax',
-                    'title'=> "Create new RefCountry",
-                    'content'=>'<span class="text-success">Create RefCountry success</span>',
+                    'title'=> "Create new RefGoldarah",
+                    'content'=>'<span class="text-success">Create RefGoldarah success</span>',
                     'footer'=> Html::button('Close',['class'=>'btn btn-secondary float-left','data-dismiss'=>"modal"]).
                             Html::a('Create More',['create'],['class'=>'btn btn-primary','role'=>'modal-remote'])
 
                 ];
             }else{
                 return [
-                    'title'=> "Create new RefCountry",
+                    'title'=> "Create new RefGoldarah",
                     'content'=>$this->renderAjax('create', [
                         'model' => $model,
                     ]),
@@ -124,7 +124,7 @@ class RefCountryController extends Controller
             *   Process for non-ajax request
             */
             if ($model->load($request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->ID_COUNTRY]);
+                return $this->redirect(['view', 'id' => $model->ID]);
             } else {
                 return $this->render('create', [
                     'model' => $model,
@@ -135,7 +135,7 @@ class RefCountryController extends Controller
     }
 
     /**
-     * Updates an existing RefCountry model.
+     * Updates an existing RefGoldarah model.
      * For ajax request will return json object
      * and for non-ajax request if update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
@@ -153,7 +153,7 @@ class RefCountryController extends Controller
             Yii::$app->response->format = Response::FORMAT_JSON;
             if($request->isGet){
                 return [
-                    'title'=> "Update RefCountry #".$id,
+                    'title'=> "Update RefGoldarah #".$id,
                     'content'=>$this->renderAjax('update', [
                         'model' => $model,
                     ]),
@@ -163,7 +163,7 @@ class RefCountryController extends Controller
             }else if($model->load($request->post()) && $model->save()){
                 return [
                     'forceReload'=>'#crud-datatable-pjax',
-                    'title'=> "RefCountry #".$id,
+                    'title'=> "RefGoldarah #".$id,
                     'content'=>$this->renderAjax('view', [
                         'model' => $model,
                     ]),
@@ -172,7 +172,7 @@ class RefCountryController extends Controller
                 ];
             }else{
                  return [
-                    'title'=> "Update RefCountry #".$id,
+                    'title'=> "Update RefGoldarah #".$id,
                     'content'=>$this->renderAjax('update', [
                         'model' => $model,
                     ]),
@@ -185,7 +185,7 @@ class RefCountryController extends Controller
             *   Process for non-ajax request
             */
             if ($model->load($request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->ID_COUNTRY]);
+                return $this->redirect(['view', 'id' => $model->ID]);
             } else {
                 return $this->render('update', [
                     'model' => $model,
@@ -195,7 +195,7 @@ class RefCountryController extends Controller
     }
 
     /**
-     * Delete an existing RefCountry model.
+     * Delete an existing RefGoldarah model.
      * For ajax request will return json object
      * and for non-ajax request if deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
@@ -223,7 +223,7 @@ class RefCountryController extends Controller
     }
 
      /**
-     * Delete multiple existing RefCountry model.
+     * Delete multiple existing RefGoldarah model.
      * For ajax request will return json object
      * and for non-ajax request if deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
@@ -254,15 +254,15 @@ class RefCountryController extends Controller
     }
 
     /**
-     * Finds the RefCountry model based on its primary key value.
+     * Finds the RefGoldarah model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return RefCountry the loaded model
+     * @return RefGoldarah the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = RefCountry::findOne($id)) !== null) {
+        if (($model = RefGoldarah::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

@@ -5,10 +5,10 @@ namespace common\models\referensi;
 use Yii;
 
 /**
- * This is the model class for table "ref_kelamin".
+ * This is the model class for table "ref_goldarah".
  *
- * @property int $ID_KELAMIN
- * @property string|null $JENIS_KELAMIN
+ * @property int $ID
+ * @property string|null $GOL_DARAH
  * @property int|null $CREATE_BY
  * @property string|null $CREATE_DATE
  * @property string|null $CREATE_IP
@@ -16,14 +16,14 @@ use Yii;
  * @property string|null $UPDATE_DATE
  * @property string|null $UPDATE_IP
  */
-class RefKelamin extends \yii\db\ActiveRecord
+class RefGoldarah extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'ref_kelamin';
+        return 'ref_goldarah';
     }
 
     /**
@@ -32,10 +32,12 @@ class RefKelamin extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['CREATE_BY', 'UPDATE_BY'], 'integer'],
+            [['ID'], 'required'],
+            [['ID', 'CREATE_BY', 'UPDATE_BY'], 'integer'],
             [['CREATE_DATE', 'UPDATE_DATE'], 'safe'],
-            [['JENIS_KELAMIN'], 'string', 'max' => 50],
+            [['GOL_DARAH'], 'string', 'max' => 50],
             [['CREATE_IP', 'UPDATE_IP'], 'string', 'max' => 100],
+            [['ID'], 'unique'],
         ];
     }
 
@@ -46,7 +48,7 @@ class RefKelamin extends \yii\db\ActiveRecord
     {
         return [
             'ID' => 'ID',
-            'JENIS_KELAMIN' => 'Jenis Kelamin',
+            'GOL_DARAH' => 'Gol Darah',
             'CREATE_BY' => 'Create By',
             'CREATE_DATE' => 'Create Date',
             'CREATE_IP' => 'Create Ip',
