@@ -21,7 +21,7 @@ return [
             // 'downloadAction' => 'gridview/export/download',
             // 'i18n' => [],
             // 'exportEncryptSalt' => 'tG85vd1',
-        ]  
+        ],     
     ],
     'components' => [
     //     'view' => [

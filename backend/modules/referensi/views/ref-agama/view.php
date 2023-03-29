@@ -2,8 +2,13 @@
 
 use yii\widgets\DetailView;
 
-/* @var $this yii\web\View */
-/* @var $model common\models\referensi\RefAgama */
+/** @var yii\web\View $this */
+/** @var common\models\referensi\RefAgama $model */
+
+$this->title = $model->AGAMA;
+$this->params['breadcrumbs'][] = ['label' => 'Ref Agamas', 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
+\yii\web\YiiAsset::register($this);
 ?>
 <div class="ref-agama-view">
  

@@ -2,11 +2,11 @@
 
 use yii\helpers\Html;
 
-
-/* @var $this yii\web\View */
-/* @var $model common\models\referensi\RefAgama */
-
+$this->title = 'Create Ref Agama';
+$this->params['breadcrumbs'][] = ['label' => 'Ref Agama', 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
 ?>
+
 <div class="ref-agama-create">
     <?= $this->render('_form', [
         'model' => $model,
