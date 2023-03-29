@@ -11,7 +11,7 @@
  Target Server Version : 80030 (8.0.30)
  File Encoding         : 65001
 
- Date: 24/03/2023 08:07:48
+ Date: 29/03/2023 09:16:56
 */
 
 SET NAMES utf8mb4;
@@ -33,6 +33,70 @@ CREATE TABLE `migration`  (
 INSERT INTO `migration` VALUES ('m000000_000000_base', 1679592550);
 INSERT INTO `migration` VALUES ('m130524_201442_init', 1679592555);
 INSERT INTO `migration` VALUES ('m190124_110200_add_verification_token_column_to_user_table', 1679592555);
+
+-- ----------------------------
+-- Table structure for ref_agama
+-- ----------------------------
+DROP TABLE IF EXISTS `ref_agama`;
+CREATE TABLE `ref_agama`  (
+  `ID` int NOT NULL AUTO_INCREMENT,
+  `AGAMA` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `CREATE_BY` int NULL DEFAULT NULL,
+  `CREATE_DATE` datetime NULL DEFAULT NULL,
+  `CREATE_IP` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `UPDATE_BY` int NULL DEFAULT NULL,
+  `UPDATE_DATE` datetime NULL DEFAULT NULL,
+  `UPDATE_IP` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`ID`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of ref_agama
+-- ----------------------------
+INSERT INTO `ref_agama` VALUES (2, 'kristen', NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `ref_agama` VALUES (3, 'islam', NULL, NULL, NULL, NULL, NULL, NULL);
+
+-- ----------------------------
+-- Table structure for ref_country
+-- ----------------------------
+DROP TABLE IF EXISTS `ref_country`;
+CREATE TABLE `ref_country`  (
+  `ID_COUNTRY` int NOT NULL AUTO_INCREMENT,
+  `COUNTRY` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `CREATE_BY` int NULL DEFAULT NULL,
+  `CREATE_DATE` datetime NULL DEFAULT NULL,
+  `CREATE_IP` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `UPDATE_BY` int NULL DEFAULT NULL,
+  `UPDATE_DATE` datetime NULL DEFAULT NULL,
+  `UPDATE_IP` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`ID_COUNTRY`) USING BTREE
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of ref_country
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for ref_kelamin
+-- ----------------------------
+DROP TABLE IF EXISTS `ref_kelamin`;
+CREATE TABLE `ref_kelamin`  (
+  `ID_KELAMIN` int NOT NULL AUTO_INCREMENT,
+  `JENIS_KELAMIN` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `CREATE_BY` int NULL DEFAULT NULL,
+  `CREATE_DATE` datetime NULL DEFAULT NULL,
+  `CREATE_IP` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  `UPDATE_BY` int NULL DEFAULT NULL,
+  `UPDATE_DATE` datetime NULL DEFAULT NULL,
+  `UPDATE_IP` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL,
+  PRIMARY KEY (`ID_KELAMIN`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_0900_ai_ci ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of ref_kelamin
+-- ----------------------------
+INSERT INTO `ref_kelamin` VALUES (1, 'perempuan', NULL, NULL, '', NULL, NULL, '');
+INSERT INTO `ref_kelamin` VALUES (2, 'laki-laki', NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- ----------------------------
 -- Table structure for user
