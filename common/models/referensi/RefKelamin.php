@@ -7,7 +7,7 @@ use Yii;
 /**
  * This is the model class for table "ref_kelamin".
  *
- * @property int $ID
+ * @property int $ID_KELAMIN
  * @property string|null $JENIS_KELAMIN
  * @property int|null $CREATE_BY
  * @property string|null $CREATE_DATE
@@ -45,7 +45,7 @@ class RefKelamin extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'ID' => 'ID',
+            'ID_KELAMIN' => 'ID',
             'JENIS_KELAMIN' => 'Jenis Kelamin',
             'CREATE_BY' => 'Create By',
             'CREATE_DATE' => 'Create Date',

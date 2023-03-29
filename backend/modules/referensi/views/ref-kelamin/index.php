@@ -39,7 +39,7 @@ CrudAsset::register($this);
             'responsive' => true,
             'panel' => [
                 'type' => 'primary',
-                'heading' => '<i class="fas fa-list-alt"></i> Ref Kelamins listing',
+                'heading' => '<i class="fas fa-list-alt"></i> Ref Kelamin listing',
                 'before'=>'<em>* Resize table columns just like a spreadsheet by dragging the column edges.</em>',
                 'after'=>BulkButtonWidget::widget([
                             'buttons'=>Html::a('<i class="fas fa-trash"></i>&nbsp; Delete All',

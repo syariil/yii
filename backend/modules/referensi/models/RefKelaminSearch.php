@@ -18,7 +18,7 @@ class RefKelaminSearch extends RefKelamin
     public function rules()
     {
         return [
-            [['ID', 'CREATE_BY', 'UPDATE_BY'], 'integer'],
+            [['ID_KELAMIN', 'CREATE_BY', 'UPDATE_BY'], 'integer'],
             [['JENIS_KELAMIN', 'CREATE_DATE', 'CREATE_IP', 'UPDATE_DATE', 'UPDATE_IP'], 'safe'],
         ];
     }
@@ -56,7 +56,7 @@ class RefKelaminSearch extends RefKelamin
         }
 
         $query->andFilterWhere([
-            'ID' => $this->ID,
+            'ID_KELAMIN' => $this->ID_KELAMIN,
             'CREATE_BY' => $this->CREATE_BY,
             'CREATE_DATE' => $this->CREATE_DATE,
             'UPDATE_BY' => $this->UPDATE_BY,
