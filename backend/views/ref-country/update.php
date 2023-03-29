@@ -2,13 +2,13 @@
 
 use yii\helpers\Html;
 
-
 /* @var $this yii\web\View */
-/* @var $model common\models\referensi\RefAgama */
-
+/* @var $model common\models\referensi\RefCountry */
 ?>
-<div class="ref-agama-create">
+<div class="ref-country-update">
+
     <?= $this->render('_form', [
         'model' => $model,
     ]) ?>
+
 </div>

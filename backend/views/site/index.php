@@ -1,5 +1,5 @@
 <?php
-$this->title = 'Starter Page';
+$this->title = 'Starter';
 $this->params['breadcrumbs'] = [['label' => $this->title]];
 ?>
 <div class="container-fluid">
@@ -57,7 +57,7 @@ $this->params['breadcrumbs'] = [['label' => $this->title]];
         <div class="col-md-4 col-sm-6 col-12">
             <?= \hail812\adminlte\widgets\InfoBox::widget([
                 'text' => 'Bookmarks',
-                'number' => '41,410',
+                'number' => '41,0',
                 'icon' => 'far fa-bookmark',
                 'progress' => [
                     'width' => '70%',

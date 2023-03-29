@@ -3,15 +3,15 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\referensi\RefAgama */
+/* @var $model common\models\referensi\RefCountry */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="ref-agama-form">
+<div class="ref-country-form">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'AGAMA')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'COUNTRY')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'CREATE_BY')->textInput() ?>
 

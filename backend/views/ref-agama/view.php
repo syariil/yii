@@ -11,13 +11,13 @@ use yii\widgets\DetailView;
         'model' => $model,
         'attributes' => [
             'ID',
-            'AGAMA',
-            'CREATE_BY',
-            'CREATE_DATE',
-            'CREATE_IP',
-            'UPDATE_BY',
-            'UPDATE_DATE',
-            'UPDATE_IP',
+            'AGAMA'
+            // 'CREATE_BY',
+            // 'CREATE_DATE',
+            // 'CREATE_IP',
+            // 'UPDATE_BY',
+            // 'UPDATE_DATE',
+            // 'UPDATE_IP',
         ],
     ]) ?>
 

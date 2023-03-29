@@ -3,8 +3,8 @@
 namespace backend\modules\referensi\controllers;
 
 use Yii;
-use common\models\referensi\RefAgama;
-use backend\modules\referensi\models\RefAgamaSearch;
+use common\models\referensi\RefCountry;
+use backend\modules\referensi\models\RefCountrySearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -12,9 +12,9 @@ use \yii\web\Response;
 use yii\helpers\Html;
 
 /**
- * RefAgamaController implements the CRUD actions for RefAgama model.
+ * RefCountryController implements the CRUD actions for RefCountry model.
  */
-class RefAgamaController extends Controller
+class RefCountryController extends Controller
 {
     /**
      * @inheritdoc
@@ -33,12 +33,12 @@ class RefAgamaController extends Controller
     }
 
     /**
-     * Lists all RefAgama models.
+     * Lists all RefCountry models.
      * @return mixed
      */
     public function actionIndex()
     {
-        $searchModel = new RefAgamaSearch();
+        $searchModel = new RefCountrySearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
@@ -49,7 +49,7 @@ class RefAgamaController extends Controller
 
 
     /**
-     * Displays a single RefAgama model.
+     * Displays a single RefCountry model.
      * @param integer $id
      * @return mixed
      */
@@ -59,7 +59,7 @@ class RefAgamaController extends Controller
         if($request->isAjax){
             Yii::$app->response->format = Response::FORMAT_JSON;
             return [
-                    'title'=> "RefAgama #".$id,
+                    'title'=> "RefCountry #".$id,
                     'content'=>$this->renderAjax('view', [
                         'model' => $this->findModel($id),
                     ]),
@@ -74,7 +74,7 @@ class RefAgamaController extends Controller
     }
 
     /**
-     * Creates a new RefAgama model.
+     * Creates a new RefCountry model.
      * For ajax request will return json object
      * and for non-ajax request if creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
@@ -82,7 +82,7 @@ class RefAgamaController extends Controller
     public function actionCreate()
     {
         $request = Yii::$app->request;
-        $model = new RefAgama();
+        $model = new RefCountry();
 
         if($request->isAjax){
             /*
@@ -91,7 +91,7 @@ class RefAgamaController extends Controller
             Yii::$app->response->format = Response::FORMAT_JSON;
             if($request->isGet){
                 return [
-                    'title'=> "Create new RefAgama",
+                    'title'=> "Create new RefCountry",
                     'content'=>$this->renderAjax('create', [
                         'model' => $model,
                     ]),
@@ -102,15 +102,15 @@ class RefAgamaController extends Controller
             }else if($model->load($request->post()) && $model->save()){
                 return [
                     'forceReload'=>'#crud-datatable-pjax',
-                    'title'=> "Create new RefAgama",
-                    'content'=>'<span class="text-success">Create RefAgama success</span>',
+                    'title'=> "Create new RefCountry",
+                    'content'=>'<span class="text-success">Create RefCountry success</span>',
                     'footer'=> Html::button('Close',['class'=>'btn btn-secondary float-left','data-dismiss'=>"modal"]).
                             Html::a('Create More',['create'],['class'=>'btn btn-primary','role'=>'modal-remote'])
 
                 ];
             }else{
                 return [
-                    'title'=> "Create new RefAgama",
+                    'title'=> "Create new RefCountry",
                     'content'=>$this->renderAjax('create', [
                         'model' => $model,
                     ]),
@@ -124,7 +124,7 @@ class RefAgamaController extends Controller
             *   Process for non-ajax request
             */
             if ($model->load($request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->ID]);
+                return $this->redirect(['view', 'id' => $model->ID_COUNTRY]);
             } else {
                 return $this->render('create', [
                     'model' => $model,
@@ -135,7 +135,7 @@ class RefAgamaController extends Controller
     }
 
     /**
-     * Updates an existing RefAgama model.
+     * Updates an existing RefCountry model.
      * For ajax request will return json object
      * and for non-ajax request if update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
@@ -153,7 +153,7 @@ class RefAgamaController extends Controller
             Yii::$app->response->format = Response::FORMAT_JSON;
             if($request->isGet){
                 return [
-                    'title'=> "Update RefAgama #".$id,
+                    'title'=> "Update RefCountry #".$id,
                     'content'=>$this->renderAjax('update', [
                         'model' => $model,
                     ]),
@@ -163,7 +163,7 @@ class RefAgamaController extends Controller
             }else if($model->load($request->post()) && $model->save()){
                 return [
                     'forceReload'=>'#crud-datatable-pjax',
-                    'title'=> "RefAgama #".$id,
+                    'title'=> "RefCountry #".$id,
                     'content'=>$this->renderAjax('view', [
                         'model' => $model,
                     ]),
@@ -172,7 +172,7 @@ class RefAgamaController extends Controller
                 ];
             }else{
                  return [
-                    'title'=> "Update RefAgama #".$id,
+                    'title'=> "Update RefCountry #".$id,
                     'content'=>$this->renderAjax('update', [
                         'model' => $model,
                     ]),
@@ -185,7 +185,7 @@ class RefAgamaController extends Controller
             *   Process for non-ajax request
             */
             if ($model->load($request->post()) && $model->save()) {
-                return $this->redirect(['view', 'id' => $model->ID]);
+                return $this->redirect(['view', 'id' => $model->ID_COUNTRY]);
             } else {
                 return $this->render('update', [
                     'model' => $model,
@@ -195,7 +195,7 @@ class RefAgamaController extends Controller
     }
 
     /**
-     * Delete an existing RefAgama model.
+     * Delete an existing RefCountry model.
      * For ajax request will return json object
      * and for non-ajax request if deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
@@ -223,7 +223,7 @@ class RefAgamaController extends Controller
     }
 
      /**
-     * Delete multiple existing RefAgama model.
+     * Delete multiple existing RefCountry model.
      * For ajax request will return json object
      * and for non-ajax request if deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
@@ -254,15 +254,15 @@ class RefAgamaController extends Controller
     }
 
     /**
-     * Finds the RefAgama model based on its primary key value.
+     * Finds the RefCountry model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return RefAgama the loaded model
+     * @return RefCountry the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = RefAgama::findOne($id)) !== null) {
+        if (($model = RefCountry::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

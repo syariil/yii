@@ -8,9 +8,9 @@ use yii\data\ActiveDataProvider;
 use common\models\referensi\RefAgama;
 
 /**
- * RefAgamaSearch represents the model behind the search form about `common\models\referensi\RefAgama`.
+ * RefAgamaAjaxSearch represents the model behind the search form about `common\models\referensi\RefAgama`.
  */
-class RefAgamaSearch extends RefAgama
+class RefAgamaAjaxSearch extends RefAgama
 {
     /**
      * @inheritdoc

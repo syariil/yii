@@ -4,7 +4,7 @@ namespace backend\modules\referensi\controllers;
 
 use Yii;
 use common\models\referensi\RefAgama;
-use backend\modules\referensi\models\RefAgamaSearch;
+use backend\modules\referensi\models\RefAgamaAjax;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -12,9 +12,9 @@ use \yii\web\Response;
 use yii\helpers\Html;
 
 /**
- * RefAgamaController implements the CRUD actions for RefAgama model.
+ * RefAgamaAjaxController implements the CRUD actions for RefAgama model.
  */
-class RefAgamaController extends Controller
+class RefAgamaAjaxController extends Controller
 {
     /**
      * @inheritdoc
@@ -38,7 +38,7 @@ class RefAgamaController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new RefAgamaSearch();
+        $searchModel = new RefAgamaAjax();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
