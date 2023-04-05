@@ -3,14 +3,14 @@ use yii\helpers\Url;
 use yii\helpers\Html;
 use yii\bootstrap4\Modal;
 use kartik\grid\GridView;
-use johnitvn\ajaxcrud\CrudAsset;
-use johnitvn\ajaxcrud\BulkButtonWidget;
+use hoaaah\ajaxcrud\CrudAsset; 
+use hoaaah\ajaxcrud\BulkButtonWidget;
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\modules\referensi\models\RefKelaminSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Ref Kelamin';
+$this->title = 'Ref Kelamins';
 $this->params['breadcrumbs'][] = $this->title;
 
 CrudAsset::register($this);
@@ -26,23 +26,23 @@ CrudAsset::register($this);
             'columns' => require(__DIR__.'/_columns.php'),
             'toolbar'=> [
                 ['content'=>
-                    Html::a('<i class="fas fa-plus"></i>', ['create'],
-                    ['role'=>'modal-remote','title'=> 'Create new Ref Kelamin','class'=>'btn btn-secondary']).
-                    Html::a('<i class="fas fa-redo"></i>', [''],
-                    ['data-pjax'=>1, 'class'=>'btn btn-secondary', 'title'=>'Reset Grid']).
+                    Html::a('<i class="glyphicon glyphicon-plus"></i>', ['create'],
+                    ['role'=>'modal-remote','title'=> 'Create new Ref Kelamins','class'=>'btn btn-default']).
+                    Html::a('<i class="glyphicon glyphicon-repeat"></i>', [''],
+                    ['data-pjax'=>1, 'class'=>'btn btn-default', 'title'=>'Reset Grid']).
                     '{toggleData}'.
                     '{export}'
                 ],
-            ],
+            ],          
             'striped' => true,
             'condensed' => true,
-            'responsive' => true,
+            'responsive' => true,          
             'panel' => [
-                'type' => 'primary',
-                'heading' => '<i class="fas fa-list-alt"></i> Ref Kelamin listing',
+                'type' => 'primary', 
+                'heading' => '<i class="glyphicon glyphicon-list"></i> Ref Kelamins listing',
                 'before'=>'<em>* Resize table columns just like a spreadsheet by dragging the column edges.</em>',
                 'after'=>BulkButtonWidget::widget([
-                            'buttons'=>Html::a('<i class="fas fa-trash"></i>&nbsp; Delete All',
+                            'buttons'=>Html::a('<i class="glyphicon glyphicon-trash"></i>&nbsp; Delete All',
                                 ["bulkdelete"] ,
                                 [
                                     "class"=>"btn btn-danger btn-xs",
@@ -52,7 +52,7 @@ CrudAsset::register($this);
                                     'data-confirm-title'=>'Are you sure?',
                                     'data-confirm-message'=>'Are you sure want to delete this item'
                                 ]),
-                        ]).
+                        ]).                        
                         '<div class="clearfix"></div>',
             ]
         ])?>
@@ -60,7 +60,6 @@ CrudAsset::register($this);
 </div>
 <?php Modal::begin([
     "id"=>"ajaxCrudModal",
-    "title" => '<h4 class="modal-title">Modal title</h4>',
     "footer"=>"",// always need it for jquery plugin
 ])?>
 <?php Modal::end(); ?>
