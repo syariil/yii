@@ -1,17 +1,18 @@
 <?php
 use yii\helpers\Html;
 use yii\helpers\Url;
-$assetDir = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
+
+$this->title = 'Login';
 ?>
 <div class="content-wrapper">
     <div class="content">
         <div class="row d-flex justify-content-center">
-            <div class="mt-4 col-md-4 mt-5">
-                <img src="<?=$assetDir?>/img/logo-kalpataru.png" alt="AdminLTE Logo" class="brand-image align-self-center ml-5" style="opacity: .8; width : 250px; height:225px;">
-                <p class="d-flex justify-content-center font-weigth-bold text-lg pt-2">
+            <div class="mt-4 col-md-4">
+                <?= Html::img('@web/images/logo.png', ['alt' => 'Logo Sikal', 'class' => 'brand-image align-self-center', 'widht'=> '225px', 'height' => '200px']) ?>
+                <p class="text-center font-weigth-bold text-lg">
                     SI-KAL
                 </p>
-                <p class="d-flex justify-content-center font-italic text-md pb-2">
+                <p class="text-center font-italic text-md">
                     Sistem Informasi Kalibrasi
                 </p>
             </div>

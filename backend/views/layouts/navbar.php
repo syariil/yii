@@ -4,56 +4,56 @@ use yii\helpers\Html;
 
 ?>
 <!-- Navbar -->
-<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+<nav class="main-header navbar navbar-expand navbar-teal accent-3 navbar-dark">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link " data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+        <li class="nav-item ">
+            <a class="nav-link text-dark" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
         </li>
-        <li class="nav-item d-none d-sm-inline-block">
-            <a href="<?=\yii\helpers\Url::home()?>" class="nav-link">Home</a>
+        <!-- <li class="nav-item d-none d-sm-inline-block">
+            
         </li>
         <li class="nav-item d-none d-sm-inline-block">
             <a href="#" class="nav-link">Contact</a>
-        </li>
-        <li class="nav-item dropdown">
+        </li> -->
+        <!-- <li class="nav-item dropdown">
             <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Dropdown</a>
             <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
                 <li><a href="#" class="dropdown-item">Some action </a></li>
                 <li><a href="#" class="dropdown-item">Some other action</a></li>
-                <li><?= Html::a('Sign out', ['site/logout'], ['data-method' => 'post', 'class' => 'dropdown-item']) ?></li>
+                
 
-                <li class="dropdown-divider"></li>
+                <li class="dropdown-divider"></li> -->
 
                 <!-- Level two dropdown-->
-                <li class="dropdown-submenu dropdown-hover">
+                <!-- <li class="dropdown-submenu dropdown-hover">
                     <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">Hover for action</a>
                     <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
                         <li>
                             <a tabindex="-1" href="#" class="dropdown-item">level 2</a>
-                        </li>
+                        </li> -->
 
                         <!-- Level three dropdown-->
-                        <li class="dropdown-submenu">
+                        <!-- <li class="dropdown-submenu">
                             <a id="dropdownSubMenu3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">level 2</a>
                             <ul aria-labelledby="dropdownSubMenu3" class="dropdown-menu border-0 shadow">
                                 <li><a href="#" class="dropdown-item">3rd level</a></li>
                                 <li><a href="#" class="dropdown-item">3rd level</a></li>
                             </ul>
-                        </li>
+                        </li> -->
                         <!-- End Level three -->
 
-                        <li><a href="#" class="dropdown-item">level 2</a></li>
+                        <!-- <li><a href="#" class="dropdown-item">level 2</a></li>
                         <li><a href="#" class="dropdown-item">level 2</a></li>
                     </ul>
-                </li>
+                </li> -->
                 <!-- End Level two -->
-            </ul>
-        </li>
+            <!-- </ul>
+        </li> -->
     </ul>
 
     <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
+    <!-- <form class="form-inline ml-3">
         <div class="input-group input-group-sm">
             <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
             <div class="input-group-append">
@@ -62,12 +62,12 @@ use yii\helpers\Html;
                 </button>
             </div>
         </div>
-    </form>
+    </form> -->
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
         <!-- Navbar Search -->
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" data-widget="navbar-search" href="#" role="button">
                 <i class="fas fa-search"></i>
             </a>
@@ -86,7 +86,7 @@ use yii\helpers\Html;
                     </div>
                 </form>
             </div>
-        </li>
+        </li> -->
 
         <!-- Messages Dropdown Menu -->
         <!-- <li class="nav-item dropdown">
@@ -175,18 +175,18 @@ use yii\helpers\Html;
             </div>
         </li> -->
         <li class="nav-item">
-            <?= Html::a('<i class="fas fa-sign-out-alt"></i>', ['/site/logout'], ['data-method' => 'post', 'class' => 'nav-link']) ?>
+            <?= Html::a('<i class="fas fa-sign-out-alt">Login</i>', ['/site/logout'], ['data-method' => 'post', 'class' => 'nav-link text-light']) ?>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+            <a class="nav-link text-light" data-widget="fullscreen" href="#" role="button">
                 <i class="fas fa-expand-arrows-alt"></i>
             </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
                 <i class="fas fa-th-large"></i>
             </a>
-        </li>
+        </li> -->
     </ul>
 </nav>
 <!-- /.navbar -->
