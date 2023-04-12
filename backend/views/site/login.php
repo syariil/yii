@@ -7,7 +7,7 @@ $this->title = 'Login';
 <div class="content-wrapper">
     <div class="content">
         <div class="row d-flex justify-content-center">
-            <div class="mt-4 col-md-4">
+            <div class="pt-4 mr-5 mt-5">
                 <?= Html::img('@web/images/logo.png', ['alt' => 'Logo Sikal', 'class' => 'brand-image align-self-center', 'widht'=> '225px', 'height' => '200px']) ?>
                 <p class="text-center font-weigth-bold text-lg">
                     SI-KAL
@@ -16,7 +16,7 @@ $this->title = 'Login';
                     Sistem Informasi Kalibrasi
                 </p>
             </div>
-            <div class="col-md-4 mt-5">
+            <div class="col-md-4 ml-5 mt-5">
                 <?php $form = \yii\bootstrap4\ActiveForm::begin(['id' => 'login-form']) ?>
                 <p>Username</p>
                 <?= $form->field($model,'username', [
