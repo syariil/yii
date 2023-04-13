@@ -8,6 +8,10 @@ $this->title = 'Login';
     <div class="content">
         <div class="row d-flex justify-content-center">
             <div class="pt-4 mr-5 mt-5">
+<<<<<<< HEAD
+=======
+                <?= Html::img('@web/images/logo.png', ['alt' => 'Logo Sikal', 'class' => 'brand-image align-self-center', 'widht'=> '225px', 'height' => '200px']) ?>
+>>>>>>> 70dec1d7a5b7155d2cb673c669817f7ec339109f
                 <p class="text-center font-weigth-bold text-lg">
                     SI-KAL
                 </p>
