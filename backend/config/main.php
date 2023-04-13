@@ -29,6 +29,16 @@ return [
                     'idField' => 'user_id'
                 ],
             ],
+            // 'as access' => [
+            //     'class' => 'yii\filters\AccessControl',
+            //     'rules' => [
+            //         [
+            //             'allow' => true,
+            //             'roles' => ['admin', 'user'], // daftar peran yang diizinkan mengakses admin panel
+            //         ],
+            //         // aturan lainnya
+            //     ],
+            // ],
         ],
     ],
     'components' => [
@@ -42,6 +52,7 @@ return [
         
         'authManager' => [
             'class' => 'yii\rbac\PhpManager', // or use 'yii\rbac\DbManager'
+            // 'defaultRoles' => ['guest'],
         ],
         'request' => [
             'csrfParam' => '_csrf-backend',

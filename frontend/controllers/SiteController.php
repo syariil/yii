@@ -77,6 +77,30 @@ class SiteController extends Controller
     {
         return $this->render('index');
     }
+    public function actionKalibrasi()
+    {
+        return $this->render('layanan/pk');
+    }
+    public function actionFilm()
+    {
+        return $this->render('layanan/pdp');
+    }
+    public function actionSinar()
+    {
+        return $this->render('layanan/uk');
+    }
+    public function actionSarana()
+    {
+        return $this->render('layanan/sarpras');
+    }
+    public function actionMagang()
+    {
+        return $this->render('layanan/magang');
+    }
+    public function actionReset()
+    {
+        return $this->render('reset');
+    }
 
     /**
      * Logs in a user.
