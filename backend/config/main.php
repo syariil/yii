@@ -15,6 +15,9 @@ return [
         'referensi' => [
             'class' => 'backend\modules\referensi\Module',
         ],
+        'layanan' => [
+            'class' => 'backend\modules\Layanan\Module'
+        ],
         'gridview' =>  [
             'class' => '\kartik\grid\Module'
         ],      

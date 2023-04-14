@@ -32,12 +32,25 @@ use yii\bootstrap\NavBar;;
         <nav class="mt-2">
             <?php
             echo \hail812\adminlte\widgets\Menu::widget([
+                // menu
                 'items' => [
                     [
                         'label' => 'Dashboard', 'icon' => 'tachometer-alt', 'url' => Url::home()
                     ],
+                    // referensi
                     [
-                        'label' => 'Referensi', 'iconStyle' => 'far', 'iconClassAdded' => 'text-info',
+                        'label' => 'Administrator', 'iconStyle' => 'far', 'iconClassAdded' => 'text-info',
+                        'items' => [
+                            ['label' => 'Agama', 'icon' => 'mosque', 'url' => ['/referensi/ref-agama']],
+                            ['label' => 'Kelamin', 'icon' => 'venus-mars', 'url' => ['/referensi/ref-kelamin']],
+                            ['label' => 'Golongan Darah', 'icon' => 'venus-mars', 'url' => ['/referensi/ref-goldarah']],
+                            ['label' => 'Provinsi', 'icon' => 'venus-mars', 'url' => ['/referensi/ref-provinsi']],
+                            ['label' => 'RBAC', 'icon' => 'id-card', 'url' => ['/admin']],
+                        ]
+                    ],
+                    // layananan
+                    [
+                        'label' => 'Tata Operasional', 'iconStyle' => 'far', 'iconClassAdded' => 'text-info',
                         'items' => [
                             ['label' => 'Agama', 'icon' => 'mosque', 'url' => ['/referensi/ref-agama']],
                             ['label' => 'Kelamin', 'icon' => 'venus-mars', 'url' => ['/referensi/ref-kelamin']],
@@ -50,7 +63,7 @@ use yii\bootstrap\NavBar;;
                     // ['label' => 'Login', 'url' => ['site/login'], 'icon' => 'sign-in-alt', 'visible' => Yii::$app->user->isGuest],
                     // ['label' => 'Gii',  'icon' => 'file-code', 'url' => ['/gii'], 'target' => '_blank'],
                     // ['label' => 'Debug', 'icon' => 'bug', 'url' => ['/debug'], 'target' => '_blank'],
-                    ['label' => 'Permission', 'icon' => 'id-card', 'url' => ['/admin']],
+                    
                 ],
                 'linkTemplate' => '<a class="nav-link {active} bg-teal" href="{url}" {target}>{icon} {label}</a>' ,
             ]);
