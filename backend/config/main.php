@@ -11,6 +11,12 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'backend\controllers',
     'bootstrap' => ['log'],
+    'aliases' => [
+        // Alias untuk Hail812/AdminLTE
+        '@adminlte-assets' => '@vendor/hail812/yii2-adminlte3/assets',
+        // Alias untuk Yii2 AjaxCrud
+        '@ajaxcrud' => '@vendor/hoaaah/yii2-ajaxcrud/assets',
+    ],
     'modules' => [
         'referensi' => [
             'class' => 'backend\modules\referensi\Module',

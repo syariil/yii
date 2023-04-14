@@ -5,7 +5,7 @@ use yii\helpers\Html;
 use yii\bootstrap\NavBar;;
 ?>
 
-<aside class="main-sidebar sidebar-light-primary elevation-4">
+<aside class="main-sidebar sidebar-light-teal elevation-4">
     <!-- Brand Logo -->
     <a href="<?php Url::to('/site/login') ?>" class="brand-link">
          <?= Html::img('@web/images/logo.png', ['alt' => 'Logo Sikal', 'class' => 'brand-image img-circle elevation-3', 'widht'=> '35px', 'height' => '35px']) ?>
@@ -39,18 +39,18 @@ use yii\bootstrap\NavBar;;
                     ],
                     // referensi
                     [
-                        'label' => 'Administrator', 'iconStyle' => 'far', 'iconClassAdded' => 'text-info',
+                        'label' => 'Administrator', 'iconStyle' => 'far', 'icon' => 'folder-open',
                         'items' => [
                             ['label' => 'Agama', 'icon' => 'mosque', 'url' => ['/referensi/ref-agama']],
                             ['label' => 'Kelamin', 'icon' => 'venus-mars', 'url' => ['/referensi/ref-kelamin']],
-                            ['label' => 'Golongan Darah', 'icon' => 'venus-mars', 'url' => ['/referensi/ref-goldarah']],
-                            ['label' => 'Provinsi', 'icon' => 'venus-mars', 'url' => ['/referensi/ref-provinsi']],
+                            ['label' => 'Golongan Darah', 'icon' => 'heart', 'url' => ['/referensi/ref-goldarah']],
+                            ['label' => 'Provinsi', 'icon' => 'globe', 'url' => ['/referensi/ref-provinsi']],
                             ['label' => 'RBAC', 'icon' => 'id-card', 'url' => ['/admin']],
                         ]
                     ],
                     // layananan
                     [
-                        'label' => 'Tata Operasional', 'iconStyle' => 'far', 'iconClassAdded' => 'text-info',
+                        'label' => 'Tata Operasional', 'icon' => 'list',
                         'items' => [
                             ['label' => 'Agama', 'icon' => 'mosque', 'url' => ['/referensi/ref-agama']],
                             ['label' => 'Kelamin', 'icon' => 'venus-mars', 'url' => ['/referensi/ref-kelamin']],

@@ -5,7 +5,7 @@ use yii\helpers\Url;
 $this->title = 'Login';
 ?>
 <div class="content-wrapper">
-    <div class="content">
+    <div class="content mx-3">
         <div class="row d-flex justify-content-center">
             <div class="pt-4 mr-5 mt-5">
 
