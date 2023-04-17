@@ -10,7 +10,7 @@ class Module extends \yii\base\Module
     /**
      * {@inheritdoc}
      */
-    public $controllerNamespace = 'backend\modules\Layanan\controllers';
+    public $controllerNamespace = 'backend\modules\layanan\controllers';
 
     /**
      * {@inheritdoc}

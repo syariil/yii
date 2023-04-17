@@ -52,10 +52,9 @@ use yii\bootstrap\NavBar;;
                     [
                         'label' => 'Tata Operasional', 'icon' => 'list',
                         'items' => [
-                            ['label' => 'Agama', 'icon' => 'mosque', 'url' => ['/referensi/ref-agama']],
-                            ['label' => 'Kelamin', 'icon' => 'venus-mars', 'url' => ['/referensi/ref-kelamin']],
-                            ['label' => 'Golongan Darah', 'icon' => 'venus-mars', 'url' => ['/referensi/ref-goldarah']],
-                            ['label' => 'Provinsi', 'icon' => 'venus-mars', 'url' => ['/referensi/ref-provinsi']],
+                            ['label' => 'Sertikasi', 'icon' => 'certificate', 'url' => ['/layanan/sertifikat']],
+                            ['label' => 'Magang', 'icon' => 'briefcase', 'url' => ['/layanan/magang']],
+                            ['label' => 'Penelitian', 'icon' => 'search', 'url' => ['/layanan/penelitian']],
                         ]
                     ],
                     // ['label' => 'Simple Link', 'icon' => 'th', 'badge' => '<span class="right badge badge-danger">New</span>'],

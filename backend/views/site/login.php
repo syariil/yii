@@ -5,11 +5,11 @@ use yii\helpers\Url;
 $this->title = 'Login';
 ?>
 <div class="content-wrapper">
-    <div class="content mx-3">
+    <div class="content">
         <div class="row d-flex justify-content-center">
-            <div class="pt-4 mr-5 mt-5">
+            <div class="pt-4 mt-5">
 
-                <?= Html::img('@web/images/logo.png', ['alt' => 'Logo Sikal', 'class' => 'brand-image align-self-center', 'widht'=> '225px', 'height' => '200px']) ?>
+                <?= Html::img('@web/images/logo.png', ['alt' => 'Logo Sikal', 'class' => 'brand-image align-self-center', 'width'=> '225px', 'height' => '200px']) ?>
 
                 <p class="text-center font-weigth-bold text-lg">
                     SI-KAL
@@ -41,15 +41,15 @@ $this->title = 'Login';
         
                 <div class="col">
                     <div class="col-8">
-                        <?= $form->field($model, 'rememberMe')->checkbox([
+                         <?= $form->field($model, 'rememberMe')->checkbox([
                             'template' => '<div class="icheck-primary">{input}{label}</div>',
                             'labelOptions' => [
                                 'class' => ''
                             ],
                             'uncheck' => null
-                        ]) ?>
-                    </div>
-                    <div class="col-4">
+                        ]) ?> 
+                    </div> 
+                    <div class="col-8">
                         <?= Html::submitButton('Sign In', ['class' => 'btn btn-primary  btn-block w-100']) ?>
                     </div>
                 </div>

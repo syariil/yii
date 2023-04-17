@@ -22,7 +22,7 @@ return [
             'class' => 'backend\modules\referensi\Module',
         ],
         'layanan' => [
-            'class' => 'backend\modules\Layanan\Module'
+            'class' => 'backend\modules\layanan\Module'
         ],
         'gridview' =>  [
             'class' => '\kartik\grid\Module'
