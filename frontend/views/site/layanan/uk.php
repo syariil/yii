@@ -1,3 +1,7 @@
+<?php
+
+$this->title = 'SI-KAL';
+?>
 <!-- Main Sidebar Container -->
     
 <!-- Content Wrapper. Contains page content -->

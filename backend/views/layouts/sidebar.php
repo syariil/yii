@@ -57,6 +57,15 @@ use yii\bootstrap\NavBar;;
                             ['label' => 'Penelitian', 'icon' => 'search', 'url' => ['/layanan/penelitian']],
                         ]
                     ],
+                    // mutu dan akreditasi
+                    [
+                        'label' => 'Mutu dan Akreditasi', 'icon' => 'medal',
+                        'items' => [
+                            ['label' => 'Mutu', 'icon' => 'diploma', 'url' => ['/layanan/ref-mutu']],
+                            ['label' => 'Akreditasi', 'icon' => 'award', 'url' => ['/layanan/ref-akreditasi']],
+                        ]
+                    ],
+
                     // ['label' => 'Simple Link', 'icon' => 'th', 'badge' => '<span class="right badge badge-danger">New</span>'],
                     ['label' => '', 'header' => true],
                     // ['label' => 'Login', 'url' => ['site/login'], 'icon' => 'sign-in-alt', 'visible' => Yii::$app->user->isGuest],

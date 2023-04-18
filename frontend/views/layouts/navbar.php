@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\helpers\Url;
 
+$this->title = 'SI-KAL';
 ?>
 <div class="wrapper">
 <!-- Navbar -->
@@ -63,8 +64,13 @@ use yii\helpers\Url;
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= Url::toRoute('site/login')?>" data-method="post"><i class="fas fa-sign-in-alt"></i> Login</a>            
-                </li>
+            <?php if(!Yii::$app->user->isGuest): ?>
+                <?= Html::a('<i class="fas fa-sign-out-alt "><span class="ml-1"></span>Logout</span></i>', ['/site/logout'], ['data-method' => 'post', 'class' => 'nav-link text-light']) ?>
+                <?php else: ?>
+                    <?= Html::a('<i class="fas fa-sign-out-alt "><span class="ml-1"></span>Login</span></i>', ['/site/login'], ['data-method' => 'post', 'class' => 'nav-link text-light']) ?>
+            <?php endif; ?>
+        </li>
+                
             </ul>
         </div>
     </nav>    <!-- /.navbar -->

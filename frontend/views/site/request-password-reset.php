@@ -20,7 +20,7 @@
     </div><!-- /.content-header -->
 
     <!-- Main content -->
-    <div class="content mx-4">
+    <div class="content">
         <div class="site-request-password-reset">
             <h1>Request password reset</h1>
             <p>Please fill out your email. A link to reset password will be sent there.</p>
