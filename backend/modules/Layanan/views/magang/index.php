@@ -38,9 +38,8 @@ CrudAsset::register($this);
             'condensed' => true,
             'responsive' => true,          
             'panel' => [
-                'type' => 'primary', 
-                'heading' => '<i class="glyphicon glyphicon-list"></i> Magangs listing',
-                'before'=>'<em>* Resize table columns just like a spreadsheet by dragging the column edges.</em>',
+                'type' => 'success', 
+                'heading' => '<i class="glyphicon glyphicon-briefcase"></i> Magang',
                 'after'=>BulkButtonWidget::widget([
                             'buttons'=>Html::a('<i class="glyphicon glyphicon-trash"></i>&nbsp; Delete All',
                                 ["bulkdelete"] ,
@@ -61,5 +60,9 @@ CrudAsset::register($this);
 <?php Modal::begin([
     "id"=>"ajaxCrudModal",
     "footer"=>"",// always need it for jquery plugin
+    "size"=>'modal-lg',   
+    "options" => [
+       "tabindex" => false,
+       ]
 ])?>
 <?php Modal::end(); ?>

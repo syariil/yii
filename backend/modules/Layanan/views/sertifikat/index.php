@@ -10,7 +10,7 @@ use hoaaah\ajaxcrud\BulkButtonWidget;
 /* @var $searchModel backend\modules\layanan\models\LayananaSertifikatSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Layanan Sertifikats';
+$this->title = 'Layanan Sertifikat';
 $this->params['breadcrumbs'][] = $this->title;
 
 CrudAsset::register($this);
@@ -38,9 +38,8 @@ CrudAsset::register($this);
             'condensed' => true,
             'responsive' => true,          
             'panel' => [
-                'type' => 'primary', 
-                'heading' => '<i class="glyphicon glyphicon-list"></i> Layanan Sertifikats listing',
-                'before'=>'<em>* Resize table columns just like a spreadsheet by dragging the column edges.</em>',
+                'type' => 'success', 
+                'heading' => '<i class="glyphicon glyphicon-certificate"></i> Layanan Sertifikat',
                 'after'=>BulkButtonWidget::widget([
                             'buttons'=>Html::a('<i class="glyphicon glyphicon-trash"></i>&nbsp; Delete All',
                                 ["bulkdelete"] ,
@@ -60,6 +59,10 @@ CrudAsset::register($this);
 </div>
 <?php Modal::begin([
     "id"=>"ajaxCrudModal",
-    "footer"=>"",// always need it for jquery plugin
+    "footer"=>"sertifikat",// always need it for jquery plugin
+    "size"=>'modal-lg',   
+    "options" => [
+       "tabindex" => false,
+       ]
 ])?>
 <?php Modal::end(); ?>
