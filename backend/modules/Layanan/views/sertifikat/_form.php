@@ -19,12 +19,6 @@ use yii\widgets\ActiveForm;
             <?= $form->field($model, 'INSTANSI')->textInput(['maxlength' => true]) ?>
         </div>
     </div>
-    <div class="col-8">
-        <?= $form->field($model, 'CREATE_AT')->widget(\yii\jui\DatePicker::className(), [
-            'options' => ['class' => 'form-control'],
-            'dateFormat' => 'YYYY-MM-DD',
-        ]) ?>
-    </div>
     <?php if (!Yii::$app->request->isAjax){ ?>
           <div class="form-group col-8">
             <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
