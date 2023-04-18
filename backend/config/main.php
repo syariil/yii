@@ -18,6 +18,9 @@ return [
         '@ajaxcrud' => '@vendor/hoaaah/yii2-ajaxcrud/assets',
     ],
     'modules' => [
+        'bimtekmagang' => [
+            'class' => 'backend\modules\bimtekmagang\Module',
+        ],
         'referensi' => [
             'class' => 'backend\modules\referensi\Module',
         ],

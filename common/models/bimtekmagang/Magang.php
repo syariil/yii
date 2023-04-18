@@ -1,14 +1,18 @@
 <?php
 
-namespace common\models\akreditasi;
+namespace common\models\bimtekmagang;
 
 use Yii;
 
 /**
- * This is the model class for table "REF_AKREDITASI".
+ * This is the model class for table "MAGANG".
  *
  * @property int $ID
- * @property string|null $AKREDITASI
+ * @property string|null $NIM
+ * @property string|null $NAMA
+ * @property string|null $UNIVERSITAS
+ * @property string|null $FAKULTAS
+ * @property string|null $PRODI
  * @property int|null $CREATE_BY
  * @property string|null $CREATE_DATE
  * @property string|null $CREATE_IP
@@ -16,14 +20,14 @@ use Yii;
  * @property string|null $UPDATE_DATE
  * @property string|null $UPDATE_IP
  */
-class RefAkreditasi extends \yii\db\ActiveRecord
+class Magang extends \yii\db\ActiveRecord
 {
     /**
      * {@inheritdoc}
      */
     public static function tableName()
     {
-        return 'REF_AKREDITASI';
+        return 'MAGANG';
     }
 
     /**
@@ -34,9 +38,8 @@ class RefAkreditasi extends \yii\db\ActiveRecord
         return [
             [['CREATE_BY', 'UPDATE_BY'], 'integer'],
             [['CREATE_DATE', 'UPDATE_DATE'], 'safe'],
-            [['AKREDITASI'], 'string', 'max' => 50],
-            [['CREATE_IP'], 'string', 'max' => 100],
-            [['UPDATE_IP'], 'string', 'max' => 255],
+            [['NIM', 'NAMA', 'UNIVERSITAS', 'FAKULTAS', 'PRODI'], 'string', 'max' => 50],
+            [['CREATE_IP', 'UPDATE_IP'], 'string', 'max' => 100],
         ];
     }
 
@@ -47,7 +50,11 @@ class RefAkreditasi extends \yii\db\ActiveRecord
     {
         return [
             'ID' => 'ID',
-            'AKREDITASI' => 'Akreditasi',
+            'NIM' => 'Nim',
+            'NAMA' => 'Nama',
+            'UNIVERSITAS' => 'Universitas',
+            'FAKULTAS' => 'Fakultas',
+            'PRODI' => 'Prodi',
             'CREATE_BY' => 'Create By',
             'CREATE_DATE' => 'Create Date',
             'CREATE_IP' => 'Create Ip',
