@@ -53,18 +53,21 @@ class RefKelaminController extends Controller
      * @param integer $id
      * @return mixed
      */
+
     public function actionView($id)
     {   
+        $Jenis_kelamin = RefKelaminSearch::find()->where(['id' => $id])->one();
+
         $request = Yii::$app->request;
         if($request->isAjax){
             Yii::$app->response->format = Response::FORMAT_JSON;
             return [
-                    'title'=> "RefKelamin #".$id,
+                    'title'=> "Jenis Kelamin ".$Jenis_kelamin->JENIS_KELAMIN,
                     'content'=>$this->renderAjax('view', [
                         'model' => $this->findModel($id),
                     ]),
-                    'footer'=> Html::button('Close',['class'=>'btn btn-default pull-left','data-dismiss'=>"modal"]).
-                            Html::a('Edit',['update','id'=>$id],['class'=>'btn btn-primary','role'=>'modal-remote'])
+                    'footer'=> Html::button('Keluar',['class'=>'btn btn-default pull-left','data-dismiss'=>"modal"]).
+                            Html::a('Edit',['update','id'=>$id],['class'=>'btn btn-success','role'=>'modal-remote'])
                 ];    
         }else{
             return $this->render('view', [
@@ -91,31 +94,31 @@ class RefKelaminController extends Controller
             Yii::$app->response->format = Response::FORMAT_JSON;
             if($request->isGet){
                 return [
-                    'title'=> "Create new RefKelamin",
+                    'title'=> "Membuat Jenis Kelamin baru",
                     'content'=>$this->renderAjax('create', [
                         'model' => $model,
                     ]),
-                    'footer'=> Html::button('Close',['class'=>'btn btn-default pull-left','data-dismiss'=>"modal"]).
-                                Html::button('Save',['class'=>'btn btn-primary','type'=>"submit"])
+                    'footer'=> Html::button('Keluar',['class'=>'btn btn-default pull-left','data-dismiss'=>"modal"]).
+                                Html::button('Simpan',['class'=>'btn btn-success','type'=>"submit"])
         
                 ];         
             }else if($model->load($request->post()) && $model->save()){
                 return [
                     'forceReload'=>'#crud-datatable-pjax',
-                    'title'=> "Create new RefKelamin",
-                    'content'=>'<span class="text-success">Create RefKelamin success</span>',
-                    'footer'=> Html::button('Close',['class'=>'btn btn-default pull-left','data-dismiss'=>"modal"]).
-                            Html::a('Create More',['create'],['class'=>'btn btn-primary','role'=>'modal-remote'])
+                    'title'=> "Membuat Jenis Kelamin baru",
+                    'content'=>'<span class="text-success">Membuat jenis kelamin baru berhasil</span>',
+                    'footer'=> Html::button('Keluar',['class'=>'btn btn-default pull-left','data-dismiss'=>"modal"]).
+                            Html::a('Buat Lagi',['create'],['class'=>'btn btn-success','role'=>'modal-remote'])
         
                 ];         
             }else{           
                 return [
-                    'title'=> "Create new RefKelamin",
+                    'title'=> "Membuat Jenis Kelamin baru",
                     'content'=>$this->renderAjax('create', [
                         'model' => $model,
                     ]),
-                    'footer'=> Html::button('Close',['class'=>'btn btn-default pull-left','data-dismiss'=>"modal"]).
-                                Html::button('Save',['class'=>'btn btn-primary','type'=>"submit"])
+                    'footer'=> Html::button('Keluar',['class'=>'btn btn-default pull-left','data-dismiss'=>"modal"]).
+                                Html::button('Simpan',['class'=>'btn btn-success','type'=>"submit"])
         
                 ];         
             }
@@ -143,6 +146,7 @@ class RefKelaminController extends Controller
      */
     public function actionUpdate($id)
     {
+        $Jenis_kelamin = RefKelaminSearch::find()->where(['id' => $id])->one();
         $request = Yii::$app->request;
         $model = $this->findModel($id);       
 
@@ -153,31 +157,31 @@ class RefKelaminController extends Controller
             Yii::$app->response->format = Response::FORMAT_JSON;
             if($request->isGet){
                 return [
-                    'title'=> "Update RefKelamin #".$id,
+                    'title'=> "Update Jenis Kelamin ".$Jenis_kelamin->JENIS_KELAMIN,
                     'content'=>$this->renderAjax('update', [
                         'model' => $model,
                     ]),
-                    'footer'=> Html::button('Close',['class'=>'btn btn-default pull-left','data-dismiss'=>"modal"]).
-                                Html::button('Save',['class'=>'btn btn-primary','type'=>"submit"])
+                    'footer'=> Html::button('Keluar',['class'=>'btn btn-default pull-left','data-dismiss'=>"modal"]).
+                                Html::button('Update',['class'=>'btn btn-success','type'=>"submit"])
                 ];         
             }else if($model->load($request->post()) && $model->save()){
                 return [
                     'forceReload'=>'#crud-datatable-pjax',
-                    'title'=> "RefKelamin #".$id,
+                    'title'=> "Jenis Kelamin ".$Jenis_kelamin->JENIS_KELAMIN,
                     'content'=>$this->renderAjax('view', [
                         'model' => $model,
                     ]),
-                    'footer'=> Html::button('Close',['class'=>'btn btn-default pull-left','data-dismiss'=>"modal"]).
-                            Html::a('Edit',['update','id'=>$id],['class'=>'btn btn-primary','role'=>'modal-remote'])
+                    'footer'=> Html::button('Keluar',['class'=>'btn btn-default pull-left','data-dismiss'=>"modal"]).
+                            Html::a('Update',['update','id'=>$id],['class'=>'btn btn-success','role'=>'modal-remote'])
                 ];    
             }else{
                  return [
-                    'title'=> "Update RefKelamin #".$id,
+                    'title'=> "Update Jenis Kelamin ".$Jenis_kelamin->JENIS_KELAMIN,
                     'content'=>$this->renderAjax('update', [
                         'model' => $model,
                     ]),
-                    'footer'=> Html::button('Close',['class'=>'btn btn-default pull-left','data-dismiss'=>"modal"]).
-                                Html::button('Save',['class'=>'btn btn-primary','type'=>"submit"])
+                    'footer'=> Html::button('Keluar',['class'=>'btn btn-default pull-left','data-dismiss'=>"modal"]).
+                                Html::button('Update',['class'=>'btn btn-primary','type'=>"submit"])
                 ];        
             }
         }else{
@@ -268,4 +272,9 @@ class RefKelaminController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+
+    /**     
+     *  {@inheritdoc}
+     */
+
 }

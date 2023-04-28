@@ -12,23 +12,10 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'JENIS_KELAMIN')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'CREATE_BY')->textInput() ?>
-
-    <?= $form->field($model, 'CREATE_DATE')->textInput() ?>
-
-    <?= $form->field($model, 'CREATE_IP')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'UPDATE_BY')->textInput() ?>
-
-    <?= $form->field($model, 'UPDATE_DATE')->textInput() ?>
-
-    <?= $form->field($model, 'UPDATE_IP')->textInput(['maxlength' => true]) ?>
-
   
 	<?php if (!Yii::$app->request->isAjax){ ?>
 	  	<div class="form-group">
-	        <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
+	        <?= Html::submitButton($model->isNewRecord ? 'Simpan' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-success']) ?>
 	    </div>
 	<?php } ?>
 

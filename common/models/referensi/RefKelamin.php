@@ -3,7 +3,7 @@
 namespace common\models\referensi;
 
 use Yii;
-
+use yii\db\Expression;
 /**
  * This is the model class for table "ref_kelamin".
  *
@@ -54,5 +54,28 @@ class RefKelamin extends \yii\db\ActiveRecord
             'UPDATE_DATE' => 'Update Date',
             'UPDATE_IP' => 'Update Ip',
         ];
+    }
+
+    public function beforeSave($insert)
+    {        
+        $userId = (Yii::$app && Yii::$app->user) ? Yii::$app->user->id : null;
+        $userIP = (Yii::$app->request) ? Yii::$app->request->userIP : null;
+        if (parent::beforeSave($insert)) {
+            if ($this->isNewRecord) {
+                $this->setAttributes([                    
+                    'CREATE_DATE' => new Expression('NOW()'),
+                    'CREATE_BY' => $userId,                    
+                    'CREATE_IP' => $userIP,
+                ]);                
+                return true;
+            }
+            $this->setAttributes([                
+                'UPDATE_DATE' => new Expression('NOW()'),
+                'UPDATE_BY' => $userId,                
+                'UPDATE_IP' => $userIP,
+            ]);
+            return true;        
+        }
+        return false;
     }
 }

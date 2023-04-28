@@ -10,7 +10,7 @@ use hoaaah\ajaxcrud\BulkButtonWidget;
 /* @var $searchModel backend\modules\referensi\models\RefKelaminSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Ref Kelamins';
+$this->title = 'Jenis Kelamin';
 $this->params['breadcrumbs'][] = $this->title;
 
 CrudAsset::register($this);
@@ -26,10 +26,10 @@ CrudAsset::register($this);
             'columns' => require(__DIR__.'/_columns.php'),
             'toolbar'=> [
                 ['content'=>
-                    Html::a('<i class="glyphicon glyphicon-plus"></i>', ['create'],
-                    ['role'=>'modal-remote','title'=> 'Create new Ref Kelamins','class'=>'btn btn-default']).
-                    Html::a('<i class="glyphicon glyphicon-repeat"></i>', [''],
-                    ['data-pjax'=>1, 'class'=>'btn btn-default', 'title'=>'Reset Grid']).
+                    Html::a('<i class="fas fa-plus"></i>', ['create'],
+                    ['role'=>'modal-remote','title'=> 'Create new Kelamin','class'=>'btn btn-primary']).
+                    Html::a('<i class="fas fa-retweet"></i>', [''],
+                    ['data-pjax'=>1, 'class'=>'btn btn-primary', 'title'=>'Reset Grid']).
                     '{toggleData}'.
                     '{export}'
                 ],
@@ -39,8 +39,7 @@ CrudAsset::register($this);
             'responsive' => true,          
             'panel' => [
                 'type' => 'primary', 
-                'heading' => '<i class="glyphicon glyphicon-list"></i> Ref Kelamins listing',
-                'before'=>'<em>* Resize table columns just like a spreadsheet by dragging the column edges.</em>',
+                'heading' => '<i class="nav-icon fas fa-venus-mars"></i>Jenis Kelamin',
                 'after'=>BulkButtonWidget::widget([
                             'buttons'=>Html::a('<i class="glyphicon glyphicon-trash"></i>&nbsp; Delete All',
                                 ["bulkdelete"] ,
@@ -60,7 +59,6 @@ CrudAsset::register($this);
 </div>
 <?php Modal::begin([
     "id"=>"ajaxCrudModal",
-    "title" => '<h4 class="modal-title">Modal title</h4>',
     "footer"=>"",// always need it for jquery plugin
     "size"=>'modal-lg',   
      "options" => [

@@ -1,5 +1,6 @@
 <?php
 return [
+    'bsDependencyEnabled' => false,
     'adminEmail' => 'admin@example.com',
     'hail812/yii2-adminlte3' => [
         'pluginMap' => [

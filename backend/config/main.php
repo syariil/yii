@@ -18,6 +18,10 @@ return [
         '@ajaxcrud' => '@vendor/hoaaah/yii2-ajaxcrud/assets',
     ],
     'modules' => [
+        'gridview' =>  [
+            'class' => '\kartik\grid\Module',
+            'bsVersion' => '4.x',
+        ],      
         'bimtekmagang' => [
             'class' => 'backend\modules\bimtekmagang\Module',
         ],
@@ -27,9 +31,7 @@ return [
         'layanan' => [
             'class' => 'backend\modules\layanan\Module'
         ],
-        'gridview' =>  [
-            'class' => '\kartik\grid\Module'
-        ],      
+        
         'admin' => [
             'class' => 'sant\admin\Module',
             'layout' => 'left-menu', // it can be '@path/to/your/layout'.
@@ -54,25 +56,15 @@ return [
         ],
     ],
     'components' => [
-    //     'view' => [
-    //         'theme' => [
-    //             'pathMap' => [
-    //                '@app/views' => '@backend/views/layouts/main'
-    //             ],
-    //         ],
-    //    ],
         
         'authManager' => [
             'class' => 'yii\rbac\PhpManager', // or use 'yii\rbac\DbManager'
-            // 'defaultRoles' => ['guest'],
         ],
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
         'user' => [
             'identityClass' => 'common\models\User',
-            // 'identityClass' => 'sant\admin\models\User',
-            // 'loginUrl' => ['admin/user/login'],
             'enableAutoLogin' => true,
             'identityCookie' => ['name' => '_identity-backend', 'httpOnly' => true],
         ],
@@ -102,18 +94,18 @@ return [
     
     ],
 
-    // 'as access' => [
-        // 'class' => 'sant\admin\components\AccessControl',
-        // 'allowActions' => [
-        //     'site/*',
-        //     'admin/*',
-        //     'some-controller/some-action',
-        //     // The actions listed here will be allowed to everyone including guests.
-        //     // So, 'admin/*' should not appear here in the production, of course.
-        //     // But in the earlier stages of your development, you may probably want to
-        //     // add a lot of actions here until you finally completed setting up rbac,
-        //     // otherwise you may not even take a first step.
-        // ]
+        // 'as access' => [
+    //     'class' => 'sant\admin\components\AccessControl',
+    //     'allowActions' => [
+    //         'site/*',
+    //         'admin/*',
+    //         'some-controller/some-action',
+    //         // The actions listed here will be allowed to everyone including guests.
+    //         // So, 'admin/*' should not appear here in the production, of course.
+    //         // But in the earlier stages of your development, you may probably want to
+    //         // add a lot of actions here until you finally completed setting up rbac,
+    //         // otherwise you may not even take a first step.
+    //     ]
     // ],
 
     'params' => $params,

@@ -18,25 +18,25 @@ return [
         'class'=>'\kartik\grid\DataColumn',
         'attribute'=>'JENIS_KELAMIN',
     ],
-    [
-        'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'CREATE_BY',
-    ],
-    [
-        'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'CREATE_DATE',
-    ],
-    [
-        'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'CREATE_IP',
-    ],
     // [
-        // 'class'=>'\kartik\grid\DataColumn',
-        // 'attribute'=>'UPDATE_BY',
+    //     'class'=>'\kartik\grid\DataColumn',
+    //     'attribute'=>'CREATE_DATE',
+    // ],
+    // [
+    //     'class'=>'\kartik\grid\DataColumn',
+    //     'attribute'=>'CREATE_BY',
+    // ],
+    // [
+    //     'class'=>'\kartik\grid\DataColumn',
+    //     'attribute'=>'CREATE_IP',
     // ],
     // [
         // 'class'=>'\kartik\grid\DataColumn',
         // 'attribute'=>'UPDATE_DATE',
+    // ],
+    // [
+        // 'class'=>'\kartik\grid\DataColumn',
+        // 'attribute'=>'UPDATE_BY',
     // ],
     // [
         // 'class'=>'\kartik\grid\DataColumn',
