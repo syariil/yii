@@ -16,7 +16,7 @@ return [
     ],
     [
         'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'PROGRAM_STUDI',
+        'attribute'=>'MATERI',
     ],
     // [
     //     'class'=>'\kartik\grid\DataColumn',

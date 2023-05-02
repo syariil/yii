@@ -16,7 +16,7 @@ return [
     ],
     [
         'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'PROGRAM_STUDI',
+        'attribute'=>'JADWAL_BIMTEK',
     ],
     // [
     //     'class'=>'\kartik\grid\DataColumn',

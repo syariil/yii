@@ -18,18 +18,18 @@ return [
         'class'=>'\kartik\grid\DataColumn',
         'attribute'=>'KOTA_PELAKSANAAN',
     ],
-    [
-        'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'CREATE_BY',
-    ],
-    [
-        'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'CREATE_DATE',
-    ],
-    [
-        'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'CREATE_IP',
-    ],
+    // [
+    //     'class'=>'\kartik\grid\DataColumn',
+    //     'attribute'=>'CREATE_BY',
+    // ],
+    // [
+    //     'class'=>'\kartik\grid\DataColumn',
+    //     'attribute'=>'CREATE_DATE',
+    // ],
+    // [
+    //     'class'=>'\kartik\grid\DataColumn',
+    //     'attribute'=>'CREATE_IP',
+    // ],
     // [
         // 'class'=>'\kartik\grid\DataColumn',
         // 'attribute'=>'UPDATE_BY',

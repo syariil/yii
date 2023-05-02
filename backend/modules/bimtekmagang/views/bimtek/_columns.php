@@ -16,19 +16,27 @@ return [
     ],
     [
         'class'=>'\kartik\grid\DataColumn',
-        'attribute'=>'PROGRAM_STUDI',
+        'attribute'=>'MATERI',
+    ],
+    [
+        'class'=>'\kartik\grid\DataColumn',
+        'attribute'=>'KOTA_PELAKSANAAN',
+    ],
+    [
+        'class'=>'\kartik\grid\DataColumn',
+        'attribute'=>'DURASI',
     ],
     // [
     //     'class'=>'\kartik\grid\DataColumn',
     //     'attribute'=>'CREATE_BY',
     // ],
     // [
-    //     'class'=>'\kartik\grid\DataColumn',
-    //     'attribute'=>'CREATE_DATE',
+        // 'class'=>'\kartik\grid\DataColumn',
+        // 'attribute'=>'CREATE_DATE',
     // ],
     // [
-    //     'class'=>'\kartik\grid\DataColumn',
-    //     'attribute'=>'CREATE_IP',
+        // 'class'=>'\kartik\grid\DataColumn',
+        // 'attribute'=>'CREATE_IP',
     // ],
     // [
         // 'class'=>'\kartik\grid\DataColumn',

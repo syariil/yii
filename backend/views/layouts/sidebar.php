@@ -50,9 +50,9 @@ use yii\bootstrap\NavBar;;
                     ],
                     // layananan
                     [
-                        'label' => 'Tata Operasional', 'icon' => 'list',
+                        'label' => 'Bimbingan Teknis dan Magang', 'icon' => 'list',
                         'items' => [
-                            ['label' => 'Sertikasi', 'icon' => 'certificate', 'url' => ['/layanan/sertifikat']],
+                            ['label' => 'Sertifikasi', 'icon' => 'certificate', 'url' => ['/layanan/sertifikat']],
                             ['label' => 'Magang', 'icon' => 'briefcase', 'url' => ['/layanan/magang']],
                             ['label' => 'Penelitian', 'icon' => 'search', 'url' => ['/layanan/penelitian']],
                         ]

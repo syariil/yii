@@ -26,10 +26,10 @@ CrudAsset::register($this);
             'columns' => require(__DIR__.'/_columns.php'),
             'toolbar'=> [
                 ['content'=>
-                    Html::a('<i class="glyphicon glyphicon-plus"></i>', ['create'],
-                    ['role'=>'modal-remote','title'=> 'Create new Ref Prodis','class'=>'btn btn-default']).
-                    Html::a('<i class="glyphicon glyphicon-repeat"></i>', [''],
-                    ['data-pjax'=>1, 'class'=>'btn btn-default', 'title'=>'Reset Grid']).
+                    Html::a('<i class="fas fa-plus"></i>', ['create'],
+                    ['role'=>'modal-remote','title'=> 'Create new Ref Prodis','class'=>'btn btn-secondary']).
+                    Html::a('<i class="fas fa-redo"></i>', [''],
+                    ['data-pjax'=>1, 'class'=>'btn btn-secondary', 'title'=>'Reset Grid']).
                     '{toggleData}'.
                     '{export}'
                 ],
@@ -39,10 +39,10 @@ CrudAsset::register($this);
             'responsive' => true,          
             'panel' => [
                 'type' => 'primary', 
-                'heading' => '<i class="glyphicon glyphicon-list"></i> Ref Prodis listing',
+                'heading' => '<i class="fas fa-list"></i> Ref Prodis listing',
                 'before'=>'<em>* Resize table columns just like a spreadsheet by dragging the column edges.</em>',
                 'after'=>BulkButtonWidget::widget([
-                            'buttons'=>Html::a('<i class="glyphicon glyphicon-trash"></i>&nbsp; Delete All',
+                            'buttons'=>Html::a('<i class="fas fa-trash"></i>&nbsp; Delete All',
                                 ["bulkdelete"] ,
                                 [
                                     "class"=>"btn btn-danger btn-xs",
